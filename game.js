@@ -16,8 +16,6 @@ $(document).keypress(function () {
 
 $(document).on("click", function (event) {
   const userChosenColor = event.target.id;
-  changeBackGorundColorEl = event.target;
-
   playSound(userChosenColor);
   animatePress(userChosenColor);
 
@@ -59,8 +57,6 @@ const nextSequence = function () {
 
   playSound(randomChosenColour);
 };
-
-let changeBackGorundColorEl;
 
 const animatePress = function (currentColor) {
   $("#" + currentColor).addClass("pressed");
